@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: 'http://localhost:3001/api',
+    baseURL: 'http://81.169.181.191:3001/api',
 })
 
 export const insertTicket = payload => api.post(`/ticket`, payload)
