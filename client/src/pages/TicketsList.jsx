@@ -69,6 +69,7 @@ class DeleteTicket extends Component {
 class TicketStatus extends Component {
     statusUser = event => {
         event.preventDefault()
+        console.log(statusUser)
       }
 
     render() {
