@@ -117,12 +117,10 @@ class TicketsList extends Component {
             {
                 Header: 'Prioritaet',
                 accessor: 'prioritaet',
-                filterable: true,
             },
             {
                 Header: 'Status',
                 accessor: '',
-                filterable: true,
                 Cell: function(props) {
                     if(props.original.status === 'Offen'){
                       return (
@@ -143,17 +141,11 @@ class TicketsList extends Component {
                           </span>
                       )
                     }
-
                   }
             },
             {
                 Header: 'Fertigstellungsdatum',
                 accessor: 'fertigstellungsdatum',
-                Cell: function(props) {
-                   return(
-                     <span>{props.value.join(' / ')}</span>
-                   )
-                 }
             },
             {
                 Header: '',
