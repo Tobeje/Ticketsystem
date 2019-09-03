@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import logo from '../ticket_img.jpg'
+import logo from '../ticket_img.png'
 
 const Wrapper = styled.a.attrs({
     className: 'navbar-brand',
