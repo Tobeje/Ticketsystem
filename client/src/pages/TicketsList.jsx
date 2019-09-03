@@ -72,9 +72,9 @@ class TicketStatus extends Component {
       }
 
     render() {
-      if(this.statusUser == 'Offen'){
+      if(this.statusUser === 'Offen'){
         return <TicketOpen>this.statusUser</TicketOpen>
-      }else if(this.statusUser == 'Abgeschlossen'){
+      }else if(this.statusUser === 'Abgeschlossen'){
         return <TicketFinished>this.statusUser</TicketFinished>
       }else{
         return <Ticket>this.statusUser</Ticket>
