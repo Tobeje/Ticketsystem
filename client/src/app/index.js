@@ -14,7 +14,7 @@ function App() {
                 <Route path="/" exact component={TicketMainPage} />
                 <Route path="/tickets/list" exact component={TicketsList} />
                 <Route path="/tickets/create" exact component={TicketsInsert} />
-                <Routepath="/tickets/update/:id" exact component={TicketsUpdate} />
+                <Route path="/tickets/update/:id" exact component={TicketsUpdate} />
             </Switch>
         </Router>
     )
