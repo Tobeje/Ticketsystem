@@ -69,7 +69,7 @@ class TicketsInsert extends Component {
         year: 'numeric',
         month: 'short',
         day: '2-digit' }).format(fertigstellungsdatum)
-        this.setState({ formattedDate })
+        this.setState({ '2019-09-20T00:00:00.000Z' })
     }
 
     handleIncludeTicket = async () => {
