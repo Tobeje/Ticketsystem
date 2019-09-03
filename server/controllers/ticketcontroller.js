@@ -54,6 +54,7 @@ updateTicket = async (req, res) => {
         ticket.beschreibung = body.beschreibung
         ticket.prioritaet = body.prioritaet
         ticket.fertigstellungsdatum = body.fertigstellungsdatum
+        ticket.status = body.status
         ticket
             .save()
             .then(() => {

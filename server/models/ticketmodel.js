@@ -7,6 +7,7 @@ const Ticket = new Schema(
         beschreibung: { type: String, required: true },
         prioritaet: { type: String ,enum:['Normal', 'Hoch'] ,required: true },
         fertigstellungsdatum: { type: Date },
+        status: { type: String, enum:['Offen', 'In Arbeit', 'Abgeschlossen'], required: true},
     },
     { timestamps: true },
 )
