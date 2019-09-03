@@ -4,8 +4,9 @@ import { NavBar } from '../components'
 class TicketMainPage extends Component {
     render() {
         return (
-            <NavBar />
+
             <div>
+              <NavBar />
                 <p>Welcome to the Main Page of the Ticketsystem</p>
             </div>
         )
