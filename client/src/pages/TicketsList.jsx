@@ -66,13 +66,6 @@ class DeleteTicket extends Component {
     }
 }
 
-class TicketStatus extends Component {
-    statusUser = event => {
-        event.preventDefault()
-        console.log(this.statusUser)
-      }
-}
-
 class TicketsList extends Component {
     constructor(props) {
         super(props)
