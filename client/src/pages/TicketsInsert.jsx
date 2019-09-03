@@ -69,9 +69,8 @@ class TicketsInsert extends Component {
     }
 
     handleIncludeTicket = async () => {
-        const { name, rating, time } = this.state
-        const arrayTime = time.split('/')
-        const payload = { name, rating, time: arrayTime }
+        const { benutzer, beschreibung, prioritaet, fertigstellungsdatum } = this.state
+        const payload = { benutzer, beschreibung, prioritaet, fertigstellungsdatum }
 
         await api.insertTicket(payload).then(res => {
             window.alert(`Ticket inserted successfully`)
