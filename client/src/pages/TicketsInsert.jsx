@@ -86,7 +86,7 @@ class TicketsInsert extends Component {
     }
 
     render() {
-        const { name, rating, time } = this.state
+        const { benutzer, beschreibung, prioritaet, fertigstellungsdatum } = this.state
         return (
             <Wrapper>
                 <Title>Create Ticket</Title>
@@ -105,7 +105,7 @@ class TicketsInsert extends Component {
                     onChange={this.handleChangeInputDescription}
                 />
 
-                <select class="selectpicker" id="lang" onChange={this.handleChangeInputPrio} value={this.state.value}>
+                <select class="selectpicker" id="lang" onChange={this.handleChangeInputPrio} value={prioritaet}>
                     <option value="Hoch">Hoch</option>
                     <option value="Normal">Normal</option>
                 </select>
