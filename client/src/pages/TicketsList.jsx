@@ -151,7 +151,7 @@ class TicketsList extends Component {
                 accessor: 'fertigstellungsdatum',
                 Cell: function(props) {
                    return(
-                     <span>{props.value.join(' / ')}</span>,
+                     <span>{props.value.join(' / ')}</span>
                    )
                  }
             },
