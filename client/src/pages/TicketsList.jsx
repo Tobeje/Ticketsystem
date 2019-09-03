@@ -153,6 +153,7 @@ class TicketsList extends Component {
                    return(
                      <span>{props.value.join(' / ')}</span>,
                    )
+                 }
             },
             {
                 Header: '',
