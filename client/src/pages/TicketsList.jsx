@@ -56,7 +56,7 @@ class DeleteTicket extends Component {
                 `Do tou want to delete the ticket ${this.props.id} permanently?`,
             )
         ) {
-            api.DeleteTicketById(this.props.id)
+            api.deleteTicketById(this.props.id)
             window.location.reload()
         }
     }

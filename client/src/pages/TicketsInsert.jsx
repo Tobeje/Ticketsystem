@@ -40,28 +40,32 @@ class TicketsInsert extends Component {
         super(props)
 
         this.state = {
-            name: '',
-            rating: '',
-            time: '',
+            benutzer: '',
+            beschreibung: '',
+            prioritaet: '',
+            fertigstellungsdatum: '',
+            status: 'Offen',
         }
     }
 
-    handleChangeInputName = async event => {
-        const name = event.target.value
-        this.setState({ name })
+    handleChangeInputUser = async event => {
+        const benutzer = event.target.value
+        this.setState({ benutzer })
     }
 
-    handleChangeInputRating = async event => {
-        const rating = event.target.validity.valid
-            ? event.target.value
-            : this.state.rating
+    handleChangeInputDescription = async event => {
+        const beschreibung = event.target.value
+        this.setState({ beschreibung })
+    }
 
-        this.setState({ rating })
+    handleChangeInputPrio = async event => {
+      const prioritaet = event.target.value
+      this.setState({prioritaet})
     }
 
     handleChangeInputTime = async event => {
-        const time = event.target.value
-        this.setState({ time })
+        const fertigstellungsdatum = event.target.value
+        this.setState({ fertigstellungsdatum })
     }
 
     handleIncludeTicket = async () => {
@@ -72,9 +76,11 @@ class TicketsInsert extends Component {
         await api.insertTicket(payload).then(res => {
             window.alert(`Ticket inserted successfully`)
             this.setState({
-                name: '',
-                rating: '',
-                time: '',
+              benutzer: '',
+              beschreibung: '',
+              prioritaet: '',
+              fertigstellungsdatum: '',
+              status: 'Offen',
             })
         })
     }
@@ -85,29 +91,29 @@ class TicketsInsert extends Component {
             <Wrapper>
                 <Title>Create Ticket</Title>
 
-                <Label>Name: </Label>
+                <Label>Benutzer: </Label>
                 <InputText
                     type="text"
-                    value={name}
-                    onChange={this.handleChangeInputName}
+                    value={benutzer}
+                    onChange={this.handleChangeInputUser}
                 />
 
-                <Label>Rating: </Label>
-                <InputText
-                    type="number"
-                    step="0.1"
-                    lang="en-US"
-                    min="0"
-                    max="10"
-                    pattern="[0-9]+([,\.][0-9]+)?"
-                    value={rating}
-                    onChange={this.handleChangeInputRating}
-                />
-
-                <Label>Time: </Label>
+                <Label>Beschreibung: </Label>
                 <InputText
                     type="text"
-                    value={time}
+                    value={beschreibung}
+                    onChange={this.handleChangeInputDescription}
+                />
+
+                <select class="selectpicker" id="lang" onChange={this.handleChangeInputPrio} value={this.state.value}>
+                    <option value="Hoch">Hoch</option>
+                    <option value="Normal">Normal</option>
+                </select>
+
+                <Label>Fertigstellungsdatum: </Label>
+                <InputText
+                    type="date"
+                    value={fertigstellungsdatum}
                     onChange={this.handleChangeInputTime}
                 />
 
