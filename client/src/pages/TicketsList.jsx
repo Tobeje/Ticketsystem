@@ -145,7 +145,6 @@ class TicketsList extends Component {
                     }
 
                   }
-                  },
             },
             {
                 Header: 'Fertigstellungsdatum',
