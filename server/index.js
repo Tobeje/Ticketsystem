@@ -6,7 +6,7 @@ const db = require('./db')
 const ticketRouter = require('./routes/ticketroute')
 
 const app = express()
-const apiPort = 3000
+const apiPort = 3001
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
