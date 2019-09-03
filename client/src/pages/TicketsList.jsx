@@ -71,17 +71,6 @@ class TicketStatus extends Component {
         event.preventDefault()
         console.log(this.statusUser)
       }
-
-    render() {
-      if(this.statusUser === 'Offen'){
-        return <TicketOpen>this.statusUser</TicketOpen>
-      }else if(this.statusUser === 'Abgeschlossen'){
-        return <TicketFinished>this.statusUser</TicketFinished>
-      }else{
-        return <Ticket>this.statusUser</Ticket>
-      }
-
-    }
 }
 
 class TicketsList extends Component {
@@ -132,14 +121,30 @@ class TicketsList extends Component {
             },
             {
                 Header: 'Status',
-                accessor: 'status',
+                accessor: '',
                 filterable: true,
                 Cell: function(props) {
-                  return (
-                      <span>
-                          <TicketStatus id={props.original.status} />
-                      </span>
-                    )
+                    if(props.original.status === 'Offen'){
+                      return (
+                          <span>
+                              <TicketOpen>{props.original.status}</TicketOpen>
+                          </span>
+                      )
+                    }else if(props.original.status === 'Abgeschlossen'){
+                      return (
+                          <span>
+                              <TicketFinished>{props.original.status}</TicketFinished>
+                          </span>
+                      )
+                    }else{
+                      return (
+                          <span>
+                              <Ticket>{props.original.status}</Ticket>
+                          </span>
+                      )
+                    }
+
+                  }
                   },
             },
             {
