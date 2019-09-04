@@ -23,7 +23,7 @@ const InputText = styled.input.attrs({
     margin: 5px;
 `
 
-const DropDown = styled.input.attrs({
+const DropDown = styled.div.attrs({
     className: 'form-control',
 })`
     margin: 5px;
