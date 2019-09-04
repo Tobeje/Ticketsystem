@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 
 const box = styled.div`
 background-color: #1a4e5c;
-width: 50%;
-height: 50%;
+width: 200px;
+height: 200px;
 display: inline-block;
 -webkit-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
 -moz-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
