@@ -148,7 +148,6 @@ class TicketsList extends Component {
             {
                 Header: 'Fertigstellungsdatum',
                 accessor: 'fertigstellungsdatum',
-                type: 'date',
                 Cell: function(props){
                   const date =   props.original.fertigstellungsdatum.substring(0, 10)
                   return(
