@@ -105,11 +105,12 @@ class TicketsUpdate extends Component {
     componentDidMount = async () => {
         const { id } = this.state
         const ticket = await api.getTicketById(id)
+        const date = ticket.data.data.fertigstellungsdatum.substring(0, 10)
         this.setState({
             benutzer: ticket.data.data.benutzer,
             beschreibung: ticket.data.data.beschreibung,
             prioritaet: ticket.data.data.prioritaet,
-            fertigstellungsdatum: ticket.data.data.fertigstellungsdatum.substring(0, 10));,
+            fertigstellungsdatum: date,
         })
     }
 
