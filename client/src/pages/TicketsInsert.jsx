@@ -16,6 +16,7 @@ const Container = styled.div`
 background-color:#FFF;
 width: 80%;
 margin: 0 auto;
+padding-top: 15px;
 -webkit-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
 -moz-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
 box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
