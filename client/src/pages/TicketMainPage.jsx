@@ -29,6 +29,10 @@ const Button = styled.button.attrs({
     margin: 15px 15px 15px 5px;
 `
 
+const Link = styled.link`
+color: #FFF;
+`
+
 class TicketMainPage extends Component {
     render() {
         return (
@@ -43,9 +47,11 @@ class TicketMainPage extends Component {
                 </Link>
               </Button>
               <p></p>
+              <Button>
                 <Link to="/tickets/create" className="nav-link">
                     Ticket Erstellen
                 </Link>
+              </Button>
             </Box>
         )
     }
