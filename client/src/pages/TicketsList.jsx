@@ -151,7 +151,7 @@ class TicketsList extends Component {
                 Cell: function(props){
                   const dateData = new Date(props.original.fertigstellungsdatum.substring(0, 10))
                   return(
-                    <span>{dateData.getDay()}.</span>
+                    <span>{dateData.getDay()}.{dateData.getMonth()}.{dateData.getFullYear()}</span>
                   )
                 }
             },
