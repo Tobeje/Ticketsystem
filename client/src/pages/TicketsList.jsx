@@ -149,8 +149,9 @@ class TicketsList extends Component {
                 Header: 'Fertigstellungsdatum',
                 accessor: 'fertigstellungsdatum',
                 Cell: function(props){
+                  const dateData = new Date(props.original.fertigstellungsdatum.substring(0, 10))
                   return(
-                    <span>{props.original.fertigstellungsdatum.substring(0, 10)}</span>
+                    <span>{dateData.getDay()}.</span>
                   )
                 }
             },
