@@ -109,10 +109,12 @@ class TicketsInsert extends Component {
                     onChange={this.handleChangeInputDescription}
                 />
 
+              <Label>Status: </Label>
                 <select class="selectpicker" id="lang" onChange={this.handleChangeInputPrio} value={prioritaet}>
                     <option value="Hoch">Hoch</option>
                     <option value="Normal">Normal</option>
                 </select>
+                
 
                 <Label>Fertigstellungsdatum: </Label>
                 <InputText
