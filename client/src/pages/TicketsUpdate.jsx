@@ -109,7 +109,7 @@ class TicketsUpdate extends Component {
             benutzer: ticket.data.data.benutzer,
             beschreibung: ticket.data.data.beschreibung,
             prioritaet: ticket.data.data.prioritaet,
-            fertigstellungsdatum: ticket.data.data.fertigstellungsdatum.substring(0, 10)),
+            fertigstellungsdatum: ticket.data.data.fertigstellungsdatum.substring(0, 10));,
         })
     }
 
