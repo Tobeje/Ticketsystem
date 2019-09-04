@@ -64,7 +64,7 @@ class TicketsInsert extends Component {
     }
 
     handleChangeInputTime = async event => {
-        const fertigstellungsdatum = event.target.value.toISOString()
+        const fertigstellungsdatum = new Date(event.target.value).toISOString()
         this.setState({fertigstellungsdatum })
     }
 
