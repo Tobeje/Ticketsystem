@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-const box = styled.div`
+const Box = styled.div`
 background-color: #1a4e5c;
 width: 200px;
 height: 200px;
@@ -21,13 +21,13 @@ const button = styled.button.attrs({
 class TicketMainPage extends Component {
     render() {
         return (
-            <box>
+            <Box>
               <button>
                 <Link to="/tickets/list" className="nav-link">
                     Tickets
                 </Link>
               </button>
-            </box>
+            </Box>
         )
     }
 }
