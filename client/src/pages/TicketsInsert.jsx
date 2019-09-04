@@ -59,7 +59,7 @@ class TicketsInsert extends Component {
     }
 
     handleChangeInputPrio = async event => {
-      const prioritaet = 'Hoch'
+      const prioritaet = event.target.value
       this.setState({prioritaet})
     }
 
