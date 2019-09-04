@@ -87,7 +87,9 @@ class TicketsInsert extends Component {
         const { benutzer, beschreibung, prioritaet, fertigstellungsdatum, status } = this.state
         const payload = { benutzer, beschreibung, prioritaet, fertigstellungsdatum, status }
 
-        payload.fertigstellungsdatum = new Date(payload.fertigstellungsdatum).toISOString()
+        if(payload.fertigstellungsdatum !== ''){
+          payload.fertigstellungsdatum = new Date(payload.fertigstellungsdatum).toISOString()
+        }
         await api.insertTicket(payload).then(res => {
             window.alert(`Ticket inserted successfully`)
             this.setState({
