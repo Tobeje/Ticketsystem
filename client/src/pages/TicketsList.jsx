@@ -153,7 +153,7 @@ class TicketsList extends Component {
                   const day = '' + props.original.fertigstellungsdatum.getDate()
                   const year = props.original.fertigstellungsdatum.getFullYear()
                   return (
-                    {day'.'month'.'year}
+                    {month}
                   )
                 }
             },
