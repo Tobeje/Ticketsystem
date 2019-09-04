@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactTable from 'react-table'
 import api from '../api'
+import { NavBar } from '../components'
 
 import styled from 'styled-components'
 
@@ -170,6 +171,7 @@ class TicketsList extends Component {
         }
 
         return (
+          <NavBar/>
             <Wrapper>
                 {showTable && (
                     <ReactTable

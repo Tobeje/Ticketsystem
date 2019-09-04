@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import api from '../api'
 
+import { NavBar } from '../components'
 import styled from 'styled-components'
 
 const Title = styled.h1.attrs({
@@ -94,6 +95,7 @@ class TicketsUpdate extends Component {
     render() {
         const { name, rating, time } = this.state
         return (
+          <NavBar/>
             <Wrapper>
                 <Title>Create Ticket</Title>
 
