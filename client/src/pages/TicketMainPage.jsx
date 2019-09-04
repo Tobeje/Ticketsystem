@@ -15,6 +15,9 @@ border-radius: .25rem;
 -webkit-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
 -moz-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
 box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
+@media (max-width: 768px) {
+  width: 80%;
+}
 `
 
 const Wrapper = styled.a.attrs({
