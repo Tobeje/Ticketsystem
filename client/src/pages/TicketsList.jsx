@@ -36,6 +36,11 @@ const Ticket = styled.div`
     cursor: pointer;
 `
 
+const Table = styled.div`
+width: 1110px;
+margin: 0 auto;
+`
+
 class UpdateTicket extends Component {
     updateUser = event => {
         event.preventDefault()
@@ -173,6 +178,7 @@ class TicketsList extends Component {
         return (
             <Wrapper>
               <NavBar/>
+              <Table>
                 {showTable && (
                     <ReactTable
                         data={tickets}
@@ -183,6 +189,7 @@ class TicketsList extends Component {
                         minRows={0}
                     />
                 )}
+                </Table>
             </Wrapper>
         )
     }
