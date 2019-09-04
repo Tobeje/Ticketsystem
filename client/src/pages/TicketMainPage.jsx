@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { NavBar } from '../components'
+import styled from 'styled-components'
 
 const box = styled.div.attrs({
     className: 'navbar navbar-expand-lg navbar-dark bg-dark',
