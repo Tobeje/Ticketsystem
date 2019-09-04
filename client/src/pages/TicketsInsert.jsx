@@ -42,7 +42,7 @@ class TicketsInsert extends Component {
         this.state = {
             benutzer: '',
             beschreibung: '',
-            prioritaet: '',
+            prioritaet: 'Normal',
             fertigstellungsdatum: '',
             status: 'Offen',
         }
@@ -78,7 +78,7 @@ class TicketsInsert extends Component {
             this.setState({
               benutzer: '',
               beschreibung: '',
-              prioritaet: '',
+              prioritaet: 'Normal',
               fertigstellungsdatum: '',
               status: 'Offen',
             })
@@ -110,11 +110,13 @@ class TicketsInsert extends Component {
                 />
 
               <Label>Status: </Label>
+              <InputText>
                 <select class="selectpicker" id="lang" onChange={this.handleChangeInputPrio} value={prioritaet}>
-                    <option value="Hoch">Hoch</option>
                     <option value="Normal">Normal</option>
+                    <option value="Hoch">Hoch</option>
                 </select>
-                
+                </InputText>
+
 
                 <Label>Fertigstellungsdatum: </Label>
                 <InputText
