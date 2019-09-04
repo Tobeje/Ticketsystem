@@ -23,6 +23,12 @@ const InputText = styled.input.attrs({
     margin: 5px;
 `
 
+const DropDown = styled.input.attrs({
+    className: 'form-control',
+})`
+    margin: 5px;
+`
+
 const Button = styled.button.attrs({
     className: `btn btn-primary`,
 })`
@@ -110,12 +116,12 @@ class TicketsInsert extends Component {
                 />
 
               <Label>Status: </Label>
-              <InputText>
+              <DropDown>
                 <select class="selectpicker" id="lang" onChange={this.handleChangeInputPrio} value={prioritaet}>
                     <option value="Normal">Normal</option>
                     <option value="Hoch">Hoch</option>
                 </select>
-                </InputText>
+              </DropDown>
 
 
                 <Label>Fertigstellungsdatum: </Label>
