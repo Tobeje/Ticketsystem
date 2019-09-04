@@ -101,7 +101,7 @@ class TicketsInsert extends Component {
 
     render() {
         const { benutzer, beschreibung, prioritaet, fertigstellungsdatum } = this.state
-        fertigstellungsdatum = fertigstellungsdatum.substring(0, 10);
+        const date = fertigstellungsdatum.substring(0, 10);
         return (
             <Wrapper>
                 <NavBar/>
@@ -132,7 +132,7 @@ class TicketsInsert extends Component {
                 <Label>Fertigstellungsdatum: </Label>
                 <InputText
                     type="date"
-                    value={fertigstellungsdatum}
+                    value={date}
                     onChange={this.handleChangeInputTime}
                 />
 
