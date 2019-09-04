@@ -84,7 +84,7 @@ class TicketsInsert extends Component {
             })
         })
         .catch(res => {
-          window.alert(`Something went wrong`)
+          window.alert(res.response.data.error.message)
         })
     }
 
