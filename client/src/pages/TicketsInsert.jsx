@@ -11,12 +11,14 @@ const Wrapper = styled.div.attrs({
     className: 'form-group',
 })`
     margin: 0 30px;
-    background-color:#FFF;
-    width: 80%;
-    margin: 0 auto;
-    -webkit-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
-    -moz-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
-    box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
+`
+const Container = styled.div`
+background-color:#FFF;
+width: 80%;
+margin: 0 auto;
+-webkit-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
+-moz-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
+box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
 `
 
 const Label = styled.label`
@@ -105,6 +107,7 @@ class TicketsInsert extends Component {
         return (
             <Wrapper>
                 <NavBar/>
+                <Container>
                 <Title>Create Ticket</Title>
 
                 <Label>Benutzer: </Label>
@@ -139,6 +142,7 @@ class TicketsInsert extends Component {
 
               <Button onClick={this.handleIncludeTicket}>Add Ticket</Button>
                 <CancelButton href={'/tickets/list'}>Cancel</CancelButton>
+                </Container>
             </Wrapper>
         )
     }
