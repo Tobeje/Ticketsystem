@@ -4,12 +4,15 @@ import { Link } from 'react-router-dom'
 
 const Box = styled.div`
 background-color: #1a4e5c;
-width: 200px;
-height: 200px;
+width: 50%;
+height: 50%;
 display: inline-block;
 -webkit-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
 -moz-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
 box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
+`
+const BoxAlign = styled.div`
+text-align: center;
 `
 
 const button = styled.button.attrs({
@@ -21,6 +24,7 @@ const button = styled.button.attrs({
 class TicketMainPage extends Component {
     render() {
         return (
+          <BoxAlign>
             <Box>
               <button>
                 <Link to="/tickets/list" className="nav-link">
@@ -28,6 +32,7 @@ class TicketMainPage extends Component {
                 </Link>
               </button>
             </Box>
+            </BoxAlign>
         )
     }
 }
