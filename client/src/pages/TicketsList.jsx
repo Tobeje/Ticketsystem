@@ -37,8 +37,11 @@ const Ticket = styled.div`
 `
 
 const Table = styled.div`
-width: 1110px;
+width: 80%;
 margin: 0 auto;
+-webkit-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
+-moz-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
+box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
 `
 
 class UpdateTicket extends Component {
