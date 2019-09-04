@@ -20,6 +20,7 @@ padding-top: 15px;
 -webkit-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
 -moz-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
 box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
+padding-inline: 20px;
 `
 
 const Label = styled.label`
@@ -29,7 +30,6 @@ const Label = styled.label`
 const InputText = styled.input.attrs({
     className: 'form-control',
 })`
-    margin: 5px;
 `
 
 const DropDown = styled.div.attrs({
