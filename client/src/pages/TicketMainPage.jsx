@@ -6,11 +6,12 @@ import logo from '../ticket_img.png'
 const Box = styled.div`
 background-color: #1a4e5c;
 width: 25%;
-height: 300px;
+height: 390px;
 margin: 10% auto;
 justify-content: center;
 align-items: center;
 display: grid;
+border-radius: .25rem;
 -webkit-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
 -moz-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
 box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
