@@ -148,6 +148,7 @@ class TicketsList extends Component {
             {
                 Header: 'Fertigstellungsdatum',
                 accessor: 'fertigstellungsdatum',
+                type: 'date'
             },
             {
                 Header: '',
