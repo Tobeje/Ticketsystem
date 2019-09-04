@@ -101,6 +101,7 @@ class TicketsInsert extends Component {
 
     render() {
         const { benutzer, beschreibung, prioritaet, fertigstellungsdatum } = this.state
+        fertigstellungsdatum = fertigstellungsdatum.substring(0, 10);
         return (
             <Wrapper>
                 <NavBar/>
