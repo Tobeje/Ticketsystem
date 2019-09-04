@@ -150,7 +150,7 @@ class TicketsList extends Component {
                 accessor: 'fertigstellungsdatum',
                 Cell: function(props){
                   return(
-                    {props.original.fertigstellungsdatum.substring(0, 10)}
+                    <span>{props.original.fertigstellungsdatum.substring(0, 10)}</span>
                   )
                 }
             },
