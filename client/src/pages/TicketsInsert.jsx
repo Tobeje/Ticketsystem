@@ -28,6 +28,7 @@ const Label = styled.label`
 
 const InputText = styled.input.attrs({
     className: 'form-control',
+    style: 'width:95;',
 })`
     margin: 5px;
 `
