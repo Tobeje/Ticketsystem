@@ -83,6 +83,9 @@ class TicketsInsert extends Component {
               status: 'Offen',
             })
         })
+        .catch(res => {
+          window.alert(`Something went wrong`)
+        })
     }
 
     render() {
