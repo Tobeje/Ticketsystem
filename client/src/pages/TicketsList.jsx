@@ -149,7 +149,7 @@ class TicketsList extends Component {
                 Header: 'Fertigstellungsdatum',
                 accessor: 'fertigstellungsdatum',
                 cell: function(props) {
-                  const datestring = new Date(props.original.fertigstellungsdatum
+                  const datestring = new Date(props.original.fertigstellungsdatum)
                   return (
                     {datestring}
                   )
