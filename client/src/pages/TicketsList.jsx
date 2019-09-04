@@ -150,8 +150,11 @@ class TicketsList extends Component {
                 accessor: 'fertigstellungsdatum',
                 Cell: function(props) {
                   const datestring = new Date(props.original.fertigstellungsdatum)
+                  var month = '' + (datestring.getMonth() + 1),
+                  var day = '' + datestring.getDate(),
+                  var year = datestring.getFullYear();
                   return (
-                    {datestring}
+                    {day}.{month}.{year}
                   )
                 }
             },
