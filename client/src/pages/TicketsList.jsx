@@ -149,11 +149,12 @@ class TicketsList extends Component {
                 Header: 'Fertigstellungsdatum',
                 accessor: 'fertigstellungsdatum',
                 Cell: function(props) {
-                  const month = '' + (props.original.fertigstellungsdatum.getMonth() + 1)
-                  const day = '' + props.original.fertigstellungsdatum.getDate()
-                  const year = props.original.fertigstellungsdatum.getFullYear()
+                  const datestring = new Date(props.original.fertigstellungsdatum)
+                  const month = '' + (datestring.getMonth() + 1)
+                  const day = '' + datestring.getDate()
+                  const year = datestring.getFullYear()
                   return (
-                    {month}
+                    {day}
                   )
                 }
             },
