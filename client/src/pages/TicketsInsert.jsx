@@ -64,7 +64,7 @@ class TicketsInsert extends Component {
     }
 
     handleChangeInputTime = async event => {
-        const fertigstellungsdatum = new Date(event.target.value).toISOString()
+        const fertigstellungsdatum = event.target.value
         this.setState({fertigstellungsdatum })
     }
 
@@ -72,6 +72,7 @@ class TicketsInsert extends Component {
         const { benutzer, beschreibung, prioritaet, fertigstellungsdatum, status } = this.state
         const payload = { benutzer, beschreibung, prioritaet, fertigstellungsdatum, status }
 
+        payload.fertigstellungsdatum = new Date(payload.fertigstellungsdatum).toISOString()
         await api.insertTicket(payload).then(res => {
             window.alert(`Ticket inserted successfully`)
             this.setState({
