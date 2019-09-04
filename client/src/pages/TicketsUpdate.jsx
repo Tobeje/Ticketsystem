@@ -76,6 +76,11 @@ class TicketsUpdate extends Component {
       this.setState({prioritaet})
     }
 
+    handleChangeInputStatus = async event => {
+      const status = event.target.value
+      this.setState({status})
+    }
+
     handleChangeInputTime = async event => {
         const fertigstellungsdatum = event.target.value
         this.setState({fertigstellungsdatum })
@@ -110,7 +115,7 @@ class TicketsUpdate extends Component {
     }
 
     render() {
-        const { benutzer, beschreibung, prioritaet, fertigstellungsdatum } = this.state
+        const { benutzer, beschreibung, prioritaet, fertigstellungsdatum, status } = this.state
         return (
             <Wrapper>
               <NavBar/>
@@ -131,11 +136,18 @@ class TicketsUpdate extends Component {
                       onChange={this.handleChangeInputDescription}
                   />
 
-                <Label>Status: </Label>
+                <Label>Prioritaet: </Label>
                   <select class="form-control" id="lang" onChange={this.handleChangeInputPrio} value={prioritaet}>
                       <option value="Normal">Normal</option>
                       <option value="Hoch">Hoch</option>
                   </select>
+
+                  <Label>Status: </Label>
+                    <select class="form-control" id="lang" onChange={this.handleChangeInputStatus} value={status}>
+                        <option value="Offen">Offen</option>
+                        <option value="In Arbeit">In Arbeit</option>
+                          <option value="Abgeschlossen">Abgeschlossen</option>
+                    </select>
 
 
                   <Label>Fertigstellungsdatum: </Label>
