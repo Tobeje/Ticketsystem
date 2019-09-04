@@ -23,7 +23,7 @@ text-align: center;
 margin: 15px 15px 15px 5px;
 `
 
-const button = styled.button.attrs({
+const Button = styled.button.attrs({
     className: `btn btn-primary`,
 })`
     margin: 15px 15px 15px 5px;
@@ -37,11 +37,11 @@ class TicketMainPage extends Component {
                   <img src={logo} width="150" height="150" alt="http://81.169.181.191:8000/" />
               </Wrapper>
               <p></p>
-              <button>
+              <Button>
                 <Link to="/tickets/list" className="nav-link">
                     Tickets
                 </Link>
-              </button>
+              </Button>
               <p></p>
                 <Link to="/tickets/create" className="nav-link">
                     Ticket Erstellen
