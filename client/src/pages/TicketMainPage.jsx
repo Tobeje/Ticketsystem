@@ -29,7 +29,7 @@ const Button = styled.button.attrs({
     margin: 15px 15px 15px 5px;
 `
 
-const Link = styled.link`
+const Link = styled.div`
 color: #FFF;
 `
 
