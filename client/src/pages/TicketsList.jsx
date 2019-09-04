@@ -171,8 +171,8 @@ class TicketsList extends Component {
         }
 
         return (
-          <NavBar/>
             <Wrapper>
+              <NavBar/>
                 {showTable && (
                     <ReactTable
                         data={tickets}

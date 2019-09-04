@@ -95,8 +95,8 @@ class TicketsUpdate extends Component {
     render() {
         const { name, rating, time } = this.state
         return (
-          <NavBar/>
             <Wrapper>
+              <NavBar/>
                 <Title>Create Ticket</Title>
 
                 <Label>Name: </Label>

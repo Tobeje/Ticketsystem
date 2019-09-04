@@ -87,8 +87,8 @@ class TicketsInsert extends Component {
     render() {
         const { benutzer, beschreibung, prioritaet, fertigstellungsdatum } = this.state
         return (
-          <NavBar/>
             <Wrapper>
+                <NavBar/>
                 <Title>Create Ticket</Title>
 
                 <Label>Benutzer: </Label>
