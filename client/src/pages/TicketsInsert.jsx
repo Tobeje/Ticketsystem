@@ -32,12 +32,6 @@ const InputText = styled.input.attrs({
 })`
 `
 
-const DropDown = styled.div.attrs({
-    className: 'form-control',
-})`
-    margin: 5px;
-`
-
 const Button = styled.button.attrs({
     className: `btn btn-primary`,
 })`

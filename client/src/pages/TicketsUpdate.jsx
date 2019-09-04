@@ -18,6 +18,17 @@ const Label = styled.label`
     margin: 5px;
 `
 
+const Container = styled.div`
+background-color:#FFF;
+width: 80%;
+margin: 0 auto;
+padding-top: 15px;
+-webkit-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
+-moz-box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
+box-shadow: 10px -3px 81px -10px rgba(0,0,0,0.86);
+padding-inline: 20px;
+`
+
 const InputText = styled.input.attrs({
     className: 'form-control',
 })`
@@ -42,41 +53,46 @@ class TicketsUpdate extends Component {
 
         this.state = {
             id: this.props.match.params.id,
-            name: '',
-            rating: '',
-            time: '',
+            benutzer: '',
+            beschreibung: '',
+            prioritaet: '',
+            fertigstellungsdatum: '',
+            status: '',
         }
     }
 
-    handleChangeInputName = async event => {
-        const name = event.target.value
-        this.setState({ name })
+    handleChangeInputUser = async event => {
+        const benutzer = event.target.value
+        this.setState({ benutzer })
     }
 
-    handleChangeInputRating = async event => {
-        const rating = event.target.validity.valid
-            ? event.target.value
-            : this.state.rating
+    handleChangeInputDescription = async event => {
+        const beschreibung = event.target.value
+        this.setState({ beschreibung })
+    }
 
-        this.setState({ rating })
+    handleChangeInputPrio = async event => {
+      const prioritaet = event.target.value
+      this.setState({prioritaet})
     }
 
     handleChangeInputTime = async event => {
-        const time = event.target.value
-        this.setState({ time })
+        const fertigstellungsdatum = event.target.value
+        this.setState({fertigstellungsdatum })
     }
 
     handleUpdateTicket = async () => {
-        const { id, name, rating, time } = this.state
-        const arrayTime = time.split('/')
-        const payload = { name, rating, time: arrayTime }
+        const { id, benutzer, beschreibung, prioritaet, fertigstellungsdatum, status } = this.state
+        const payload = { benutzer, beschreibung, prioritaet, fertigstellungsdatum, status }
 
         await api.updateTicketById(id, payload).then(res => {
             window.alert(`Ticket updated successfully`)
             this.setState({
-                name: '',
-                rating: '',
-                time: '',
+              benutzer: '',
+              beschreibung: '',
+              prioritaet: '',
+              fertigstellungsdatum: '',
+              status: '',
             })
         })
     }
@@ -86,47 +102,51 @@ class TicketsUpdate extends Component {
         const ticket = await api.getTicketById(id)
 
         this.setState({
-            name: ticket.data.data.name,
-            rating: ticket.data.data.rating,
-            time: ticket.data.data.time.join('/'),
+            benutzer: ticket.data.data.benutzer,
+            beschreibung: ticket.data.data.beschreibung,
+            prioritaet: ticket.data.data.prioritaet,
+            fertigstellungsdatum: ticket.data.data.fertigstellungsdatum,
         })
     }
 
     render() {
-        const { name, rating, time } = this.state
+        const { benutzer, beschreibung, prioritaet, fertigstellungsdatum } = this.state
         return (
             <Wrapper>
               <NavBar/>
-                <Title>Create Ticket</Title>
+              <Container>
+                <Title>Update Ticket</Title>
 
-                <Label>Name: </Label>
-                <InputText
-                    type="text"
-                    value={name}
-                    onChange={this.handleChangeInputName}
-                />
+                  <Label>Benutzer: </Label>
+                  <InputText
+                      type="text"
+                      value={benutzer}
+                      onChange={this.handleChangeInputUser}
+                  />
 
-                <Label>Rating: </Label>
-                <InputText
-                    type="number"
-                    step="0.1"
-                    lang="en-US"
-                    min="0"
-                    max="10"
-                    pattern="[0-9]+([,\.][0-9]+)?"
-                    value={rating}
-                    onChange={this.handleChangeInputRating}
-                />
+                  <Label>Beschreibung: </Label>
+                  <InputText
+                      type="text"
+                      value={beschreibung}
+                      onChange={this.handleChangeInputDescription}
+                  />
 
-                <Label>Time: </Label>
-                <InputText
-                    type="text"
-                    value={time}
-                    onChange={this.handleChangeInputTime}
-                />
+                <Label>Status: </Label>
+                  <select class="form-control" id="lang" onChange={this.handleChangeInputPrio} value={prioritaet}>
+                      <option value="Normal">Normal</option>
+                      <option value="Hoch">Hoch</option>
+                  </select>
 
+
+                  <Label>Fertigstellungsdatum: </Label>
+                  <InputText
+                      type="date"
+                      value={fertigstellungsdatum}
+                      onChange={this.handleChangeInputTime}
+                  />
               <Button onClick={this.handleUpdateTicket}>Update Ticket</Button>
                 <CancelButton href={'/tickets/list'}>Cancel</CancelButton>
+                </Container>
             </Wrapper>
         )
     }
