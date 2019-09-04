@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { NavBar } from '../components'
 import styled from 'styled-components'
 
-const box = styled.div.attrs({
-    className: 'navbar navbar-expand-lg navbar-dark bg-dark',
-})`
+const box = styled.div`
+background-color: #1a4e5c;
 width: 50%;
 height: 50%;
 display: inline-block;
