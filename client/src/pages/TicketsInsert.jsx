@@ -128,12 +128,10 @@ class TicketsInsert extends Component {
                 />
 
               <Label>Status: </Label>
-              <DropDown>
-                <select id="lang" onChange={this.handleChangeInputPrio} value={prioritaet}>
+                <select class="form-control" id="lang" onChange={this.handleChangeInputPrio} value={prioritaet}>
                     <option value="Normal">Normal</option>
                     <option value="Hoch">Hoch</option>
                 </select>
-              </DropDown>
 
 
                 <Label>Fertigstellungsdatum: </Label>
