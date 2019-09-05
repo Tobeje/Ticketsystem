@@ -35,6 +35,11 @@ const InputText = styled.input.attrs({
     margin: 5px;
 `
 
+const InputTextArea = styled.textarea.attrs({
+    className: 'form-control',
+})`
+`
+
 const Button = styled.button.attrs({
     className: `btn btn-primary`,
 })`
@@ -130,10 +135,11 @@ class TicketsUpdate extends Component {
                   />
 
                   <Label>Beschreibung: </Label>
-                  <InputText
+                  <InputTextArea
                       type="text"
                       value={beschreibung}
                       onChange={this.handleChangeInputDescription}
+                      rows="3"
                   />
 
                 <Label>Prioritaet: </Label>
