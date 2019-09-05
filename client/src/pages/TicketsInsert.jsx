@@ -124,7 +124,6 @@ class TicketsInsert extends Component {
                     type="text"
                     value={beschreibung}
                     onChange={this.handleChangeInputDescription}
-                    style = `height:80px;`
                 />
 
               <Label>Prioritaet: </Label>
