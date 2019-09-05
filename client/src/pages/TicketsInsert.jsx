@@ -32,9 +32,7 @@ const InputText = styled.input.attrs({
 })`
 `
 
-const InputTextBox = styled.input.attrs({
-    className: 'form-control',
-})`
+const InputTextBox = styled.input`
 height: 120px;
 `
 
