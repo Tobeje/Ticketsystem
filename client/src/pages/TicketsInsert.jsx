@@ -32,6 +32,12 @@ const InputText = styled.input.attrs({
 })`
 `
 
+const InputTextBox = styled.input.attrs({
+    className: 'form-control',
+})`
+height: 120px;
+`
+
 const Button = styled.button.attrs({
     className: `btn btn-primary`,
 })`
@@ -101,7 +107,7 @@ class TicketsInsert extends Component {
 
     render() {
         const { benutzer, beschreibung, prioritaet, fertigstellungsdatum } = this.state
-        
+
         return (
             <Wrapper>
                 <NavBar/>
@@ -116,7 +122,7 @@ class TicketsInsert extends Component {
                 />
 
                 <Label>Beschreibung: </Label>
-                <InputText
+                <InputTextBox
                     type="text"
                     value={beschreibung}
                     onChange={this.handleChangeInputDescription}
