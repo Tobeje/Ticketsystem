@@ -56,7 +56,7 @@ class UpdateTicket extends Component {
     }
 }
 
-class DeleteTicket extends Component {
+/*class DeleteTicket extends Component {
     deleteUser = event => {
         event.preventDefault()
 
@@ -73,7 +73,7 @@ class DeleteTicket extends Component {
     render() {
         return <Delete onClick={this.deleteUser}>Delete</Delete>
     }
-}
+}*/
 
 class TicketsList extends Component {
     constructor(props) {
