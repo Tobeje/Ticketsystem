@@ -16,10 +16,10 @@ const Update = styled.div`
     cursor: pointer;
 `
 
-const Delete = styled.div`
+/*const Delete = styled.div`
     color: #ff0000;
     cursor: pointer;
-`
+`*/
 
 const TicketOpen = styled.div`
     color: #a1b0b3;
@@ -105,7 +105,7 @@ class TicketsList extends Component {
                 Header: 'ID',
                 accessor: '_id',
                 filterable: true,
-                width: 60,
+                width:60,
             },
             {
                 Header: 'Benutzer',
@@ -117,7 +117,7 @@ class TicketsList extends Component {
                 Header: 'Beschreibung',
                 accessor: 'beschreibung',
                 filterable: true,
-                width: 450,
+                width:450,
             },
             {
                 Header: 'Prioritaet',
@@ -158,8 +158,18 @@ class TicketsList extends Component {
                   )
                 }
             },
-
-      /*      {
+            /*{
+                Header: '',
+                accessor: '',
+                Cell: function(props) {
+                    return (
+                        <span>
+                            <DeleteTicket id={props.original._id} />
+                        </span>
+                    )
+                },
+            },*/
+            {
                 Header: '',
                 accessor: '',
                 Cell: function(props) {
@@ -169,7 +179,7 @@ class TicketsList extends Component {
                         </span>
                     )
                 },
-            },*/
+            },
         ]
 
         let showTable = true
