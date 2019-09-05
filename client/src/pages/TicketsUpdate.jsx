@@ -32,7 +32,6 @@ padding-inline: 20px;
 const InputText = styled.input.attrs({
     className: 'form-control',
 })`
-    margin: 5px;
 `
 
 const InputTextArea = styled.textarea.attrs({
