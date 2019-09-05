@@ -111,7 +111,7 @@ class TicketsList extends Component {
                 Header: 'Benutzer',
                 accessor: 'benutzer',
                 filterable: true,
-                width:160m
+                width:160,
             },
             {
                 Header: 'Beschreibung',
