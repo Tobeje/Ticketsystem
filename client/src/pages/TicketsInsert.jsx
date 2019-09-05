@@ -32,22 +32,6 @@ const InputText = styled.input.attrs({
 })`
 `
 
-const InputTextBox = styled.input`
-display: block;
-width: 100%;
-height: 80px;
-padding: .375rem .75rem;
-font-size: 1rem;
-font-weight: 400;
-line-height: 1.5;
-color: #495057;
-background-color: #fff;
-background-clip: padding-box;
-border: 1px solid #ced4da;
-border-radius: .25rem;
-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-`
-
 const Button = styled.button.attrs({
     className: `btn btn-primary`,
 })`
@@ -132,10 +116,11 @@ class TicketsInsert extends Component {
                 />
 
                 <Label>Beschreibung: </Label>
-                <InputTextBox
-                    type="text"
+                <InputText
+                    type="textarea"
                     value={beschreibung}
                     onChange={this.handleChangeInputDescription}
+                    rows="3"
                 />
 
               <Label>Prioritaet: </Label>
